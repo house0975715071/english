@@ -1,0 +1,142 @@
+// 主題：生日與節日（6–9 歲）。只有資料，沒有程式邏輯。規格見 docs/content-schema.md。
+export default {
+  id: 'birthday-and-holidays',
+  level: '6-9',
+  zh: '生日與節日',
+  en: 'Birthday & Holidays',
+  emoji: '🎂',
+
+  // 由「最具體可畫」排到「最抽象」
+  words: [
+    { id: '6-9.birthday-and-holidays.word.1', en: 'candle', zh: '蠟燭', emoji: '🕯️', quizzable: true },
+    { id: '6-9.birthday-and-holidays.word.2', en: 'gift', zh: '禮物', emoji: '🎁', quizzable: true },
+    { id: '6-9.birthday-and-holidays.word.3', en: 'balloon', zh: '氣球', emoji: '🎈', quizzable: true },
+    { id: '6-9.birthday-and-holidays.word.4', en: 'red envelope', zh: '紅包', emoji: '🧧', quizzable: true },
+    { id: '6-9.birthday-and-holidays.word.5', en: 'moon cake', zh: '月餅', emoji: '🥮', quizzable: true },
+    { id: '6-9.birthday-and-holidays.word.6', en: 'fireworks', zh: '煙火', emoji: '🎆', quizzable: true },
+    { id: '6-9.birthday-and-holidays.word.7', en: 'Christmas', zh: '聖誕節', emoji: '🎄', quizzable: true },
+    { id: '6-9.birthday-and-holidays.word.8', en: 'party', zh: '派對', emoji: '🎉', quizzable: true },
+    { id: '6-9.birthday-and-holidays.word.9', en: 'sing', zh: '唱歌', emoji: '🎤', quizzable: true },
+    { id: '6-9.birthday-and-holidays.word.10', en: 'birthday', zh: '生日', emoji: '🎂', quizzable: true },
+    { id: '6-9.birthday-and-holidays.word.11', en: 'New Year', zh: '新年', emoji: '🧨', quizzable: false },
+    { id: '6-9.birthday-and-holidays.word.12', en: 'wish', zh: '願望', emoji: '🌠', quizzable: false },
+  ],
+
+  // 第 1–4 句 2–4 個字，第 5–8 句 5–8 個字
+  phrases: [
+    {
+      id: '6-9.birthday-and-holidays.phrase.1',
+      en: 'Happy birthday!',
+      zh: '生日快樂！',
+      emoji: '🎂🎉',
+      tokens: ['Happy', 'birthday!'],
+      keyWords: ['birthday'],
+      alsoAccept: ['birthdays', 'birthdate'],
+    },
+    {
+      id: '6-9.birthday-and-holidays.phrase.2',
+      en: 'Make a wish!',
+      zh: '許個願吧！',
+      emoji: '🙏🕯️',
+      tokens: ['Make', 'a', 'wish!'],
+      keyWords: ['wish'],
+      alsoAccept: ['which', 'fish', 'wishes'],
+    },
+    {
+      id: '6-9.birthday-and-holidays.phrase.3',
+      en: 'Happy New Year!',
+      zh: '新年快樂！',
+      emoji: '🧨🧧',
+      tokens: ['Happy', 'New', 'Year!'],
+      keyWords: ['year'],
+      alsoAccept: ['ear', 'here', 'years'],
+    },
+    {
+      id: '6-9.birthday-and-holidays.phrase.4',
+      en: 'Merry Christmas!',
+      zh: '聖誕快樂！',
+      emoji: '🎄🎁',
+      tokens: ['Merry', 'Christmas!'],
+      keyWords: ['christmas'],
+      alsoAccept: ['mary', 'marry', 'chrismas'],
+    },
+    {
+      id: '6-9.birthday-and-holidays.phrase.5',
+      en: 'Can I open my gift, please?',
+      zh: '我可以拆禮物嗎？',
+      emoji: '🎁🙏',
+      tokens: ['Can', 'I', 'open', 'my', 'gift,', 'please?'],
+      keyWords: ['open', 'gift'],
+      alsoAccept: ['give', 'gifts', 'gif'],
+    },
+    {
+      id: '6-9.birthday-and-holidays.phrase.6',
+      en: 'This gift is for you.',
+      zh: '這個禮物送給你。',
+      emoji: '🎁😊',
+      tokens: ['This', 'gift', 'is', 'for', 'you.'],
+      keyWords: ['gift'],
+      alsoAccept: ['give', 'gifts', 'gif'],
+    },
+    {
+      id: '6-9.birthday-and-holidays.phrase.7',
+      en: 'Thank you for the red envelope.',
+      zh: '謝謝你的紅包。',
+      emoji: '🧧😊',
+      tokens: ['Thank', 'you', 'for', 'the', 'red', 'envelope.'],
+      keyWords: ['envelope'],
+      alsoAccept: ['envelop', 'envelopes', 'envelops'],
+    },
+    {
+      id: '6-9.birthday-and-holidays.phrase.8',
+      en: "Let's eat moon cake together, Grandma!",
+      zh: '阿嬤，我們一起來吃月餅吧！',
+      emoji: '🥮🌕👵',
+      tokens: ["Let's", 'eat', 'moon', 'cake', 'together,', 'Grandma!'],
+      keyWords: ['moon', 'together'],
+      alsoAccept: ['mooncake', 'mooncakes', 'gather'],
+    },
+  ],
+
+  dialogues: [
+    {
+      // 第 1 段：家裡，只用本主題的單字和第 1–5 句
+      id: '6-9.birthday-and-holidays.dialogue.1',
+      title_zh: '我的生日',
+      scene_zh: '家裡的生日派對',
+      roles: [
+        { key: 'kid', emoji: '👧', name_en: 'Amy', name_zh: '小美', kid: true },
+        { key: 'mom', emoji: '👩', name_en: 'Mom', name_zh: '媽媽' },
+      ],
+      lines: [
+        { role: 'mom', en: 'Happy birthday! Time for your party!', zh: '生日快樂！派對時間到囉！' },
+        { role: 'kid', en: 'Wow! Candles and balloons! Thank you, Mom!', zh: '哇！有蠟燭跟氣球！謝謝媽媽！' },
+        { role: 'mom', en: "Let's sing!", zh: '我們來唱歌吧！' },
+        { role: 'kid', en: 'Yay! Happy birthday to me!', zh: '耶！祝我生日快樂！' },
+        { role: 'mom', en: 'Make a wish and blow out the candles!', zh: '許個願，再吹蠟燭！' },
+        { role: 'kid', en: 'Mom, can I open my gift, please?', zh: '媽媽，我可以拆禮物嗎？' },
+        { role: 'mom', en: 'Sure! Here you are.', zh: '好啊！給你。' },
+        { role: 'kid', en: 'Wow! I like this gift! Thank you, Mom!', zh: '哇！我好喜歡這個禮物！謝謝媽媽！' },
+      ],
+    },
+    {
+      // 第 2 段：外面（阿嬤家），可用更前面主題的字（hungry、dumplings、fish、dinner）
+      id: '6-9.birthday-and-holidays.dialogue.2',
+      title_zh: '阿嬤家過年',
+      scene_zh: '除夕夜的阿嬤家',
+      roles: [
+        { key: 'kid', emoji: '👧', name_en: 'Amy', name_zh: '小美', kid: true },
+        { key: 'grandma', emoji: '👵', name_en: 'Grandma', name_zh: '阿嬤' },
+      ],
+      lines: [
+        { role: 'kid', en: 'Happy New Year, Grandma!', zh: '阿嬤，新年快樂！' },
+        { role: 'grandma', en: 'Happy New Year! Are you hungry?', zh: '新年快樂！肚子餓了嗎？' },
+        { role: 'kid', en: "Yes! Grandma, what's for New Year dinner?", zh: '餓了！阿嬤，年夜飯吃什麼？' },
+        { role: 'grandma', en: 'Dumplings and fish! Here, this is for you.', zh: '水餃跟魚！來，這個給你。' },
+        { role: 'kid', en: 'Thank you for the red envelope, Grandma!', zh: '阿嬤，謝謝你的紅包！' },
+        { role: 'grandma', en: "You're welcome. Look, fireworks!", zh: '不客氣。你看，煙火！' },
+        { role: 'kid', en: 'Yay! I love New Year!', zh: '耶！我最喜歡過年了！' },
+      ],
+    },
+  ],
+};

@@ -1,0 +1,17 @@
+{
+  "name": "天天說英文 Say It Every Day",
+  "short_name": "天天說英文",
+  "description": "邊玩邊學的兒童英文（6～9 歲）：日常用語、對話口說、中英對照。",
+  "lang": "zh-TW",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#FFF8EC",
+  "theme_color": "#3A86FF",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
